@@ -1,11 +1,10 @@
+import React from 'react';
 import './App.css';
-import { Route, Switch, useHistory } from "react-router-dom";
+import Page from '../Page/Page';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Bioscoop</h1>
-    </div>
+      <Page/>
   );
 }
 

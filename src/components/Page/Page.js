@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Header from '../Header/Header';
 import Promo from "../Promo/Promo";
+import NavTab from "../NavTab/NavTab";
 
 import "./Page.css";
 
@@ -10,6 +11,7 @@ function Page() {
     <div className="page">
       <Header/>
       <Promo/>
+      <NavTab/>
     </div>
     </BrowserRouter>
   );

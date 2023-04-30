@@ -5,7 +5,7 @@ import "./Header.css";
 
 function Header() {
     return (
-        <header className="header container">
+        <header className="header">
             <Logo/>
             <Navigation/>
         </header>

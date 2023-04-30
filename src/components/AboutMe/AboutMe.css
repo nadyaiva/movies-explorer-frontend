@@ -1,0 +1,81 @@
+.about-me {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__photo {
+    border-radius: 10px;
+    margin: 60px 0 40px 0;
+}
+
+.about-me__name {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.about-me__job {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.about-me__description {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    padding-bottom: 40px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .about-me {
+        flex-direction: row-reverse;
+        padding: 66px 0 90px;
+    }
+
+    .about-me__photo {
+        height: 255px;
+        width: 207px;
+        margin: 0 0 0 50px;
+    }
+
+    .about-me__name {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .about-me__job {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .about-me__description {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
+    .about-me__job {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .about-me__description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .about-me__photo {
+        height: 270px;
+        width: 270px;
+        margin: 0 0 0 270px;
+    }
+}

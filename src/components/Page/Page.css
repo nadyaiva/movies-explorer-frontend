@@ -1,6 +1,24 @@
-.page {
-    margin: 0 auto;
-    max-width: 1280px;
-    min-width: 320px;
-    width: 100%;
+.container {
+    padding: 0 14px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #F3C1F8;
+    width: 100vw;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container {
+
+    }
 }

@@ -8,7 +8,7 @@ import logo from "../../images/logo.svg";
 
 function Logo() {
     return (
-        <Link to={'/' + paths.main}>
+        <Link className="header__elem" to={'/' + paths.main}>
             <img className="logo" src={logo} alt="logo" />
         </Link>
     )

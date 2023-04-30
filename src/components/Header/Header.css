@@ -1,4 +1,9 @@
 .header {
+    background-color: #F3C1F8;
     display: flex;
     justify-content: space-between;
+}
+
+.header__elem {
+    padding: 25px 0;
 }

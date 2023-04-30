@@ -15,7 +15,12 @@ function AboutProject() {
                     <p className="about-project__phase-description">У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
                 </li>
             </ul>
-            
+            <div className="about-project__timeline">
+                <p className="about-project__part about-project__part_backend">1 неделя</p>
+                <p className="about-project__part about-project__part_frontend">4 недели</p>
+                <p className="about-project__part-title about-project__part-title_backend">Back-end</p>
+                <p className="about-project__part-title about-project__part-title_frontend">Front-end</p>
+            </div>
         </section>
     );
 }

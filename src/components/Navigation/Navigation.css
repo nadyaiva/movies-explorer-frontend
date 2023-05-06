@@ -16,10 +16,6 @@
     text-decoration: none;
 }
 
-.navigation__link:visited {
-    color: black;
-}
-
 .navigation__link_signin {
     color: white;
     background-color: black;

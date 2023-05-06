@@ -347,3 +347,7 @@ template {
 [hidden] {
   display: none;
 }
+
+a:visited {
+  color: #000
+}

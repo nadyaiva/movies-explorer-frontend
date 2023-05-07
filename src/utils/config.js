@@ -1,5 +1,8 @@
 export const paths = {
     main: '',
-    signIn: '',
-    signUp: ''
+    signIn: 'signup',
+    signUp: 'signin',
+    movies: 'movies',
+    savedMovies: 'saved-movies',
+    profile: 'profile',
 }

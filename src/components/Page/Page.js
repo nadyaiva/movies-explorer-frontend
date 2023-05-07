@@ -1,27 +1,26 @@
-import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+
+import {paths} from "../../utils/config";
+
 import Header from '../Header/Header';
-import Promo from "../Promo/Promo";
-import NavTab from "../NavTab/NavTab";
-import AboutProject from "../AboutProject/AboutProject";
-import Techs from "../Techs/Techs";
-import AboutMe from "../AboutMe/AboutMe";
+import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
+import SavedMovies from "../SavedMovies/SavedMovies";
+import Movies from "../Movies/Movies";
 
 import "./Page.css";
 
 function Page() {
   return (
-    <BrowserRouter>
     <div className="page">
-      <Header/>
-      <Promo/>
-      <NavTab/>
-      <AboutProject/>
-      <Techs/>
-      <AboutMe/>
-      <Footer/>
+    <Header/>
+      <Routes>
+        <Route path={paths.main} element={<Main/>} />
+        <Route path={paths.savedMovies} element={<SavedMovies/>} />
+        <Route path={paths.movies} element={<Movies/>} />
+      </Routes>
+    <Footer/>
     </div>
-    </BrowserRouter>
   );
 }
 

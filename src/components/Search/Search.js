@@ -5,9 +5,11 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function Search() {
     return (
-        <section className='search'>
+        <section className='search search_wrap'>
+            <div className='search__container'>
             <SearchForm />
             <FilterCheckbox />
+            </div>
         </section>
     )
 }

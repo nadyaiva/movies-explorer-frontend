@@ -10,9 +10,9 @@ function SearchForm() {
                     type="text"
                     name="movie"
                     placeholder='Фильм'
-                    value='Поиск фильмов'
+                    value='Фильмов'
                 />
-                <button className="search-form_-submit" type="submit" />
+                <button className="search-form__submit" type="submit"><span className="search-form__svg"/></button>
             </fieldset>
         </form>
     )

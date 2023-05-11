@@ -7,6 +7,7 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Movies from "../Movies/Movies";
+import Register from "../Register/Register";
 
 import "./Page.css";
 
@@ -18,6 +19,7 @@ function Page() {
         <Route path={paths.main} element={<Main/>} />
         <Route path={paths.savedMovies} element={<SavedMovies/>} />
         <Route path={paths.movies} element={<Movies/>} />
+        <Route path={paths.signUp} element={<Register/>} />
       </Routes>
     <Footer/>
     </div>

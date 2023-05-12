@@ -8,6 +8,16 @@
     font-weight: 500;
 }
 
+.navigation__elem {
+    display: none;
+}
+
+.navigation__elem_burger {
+    background-image: url(../../images/burger.svg);
+    height: 44px;
+    width: 44px;
+}
+
 .navigation__elem_signup {
     padding-right: 14px;
 }
@@ -34,4 +44,11 @@
 }
 
 @media screen and (min-width: 1025px) {
+    .navigation__elem {
+        display: block;
+    }
+
+    .navigation__elem_burger {
+        display: none;
+    }
 }

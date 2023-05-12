@@ -5,7 +5,12 @@ import PageWithForm from "../PageWithForm/PageWithForm";
 function Register() {
   return (
     <section className="register">
-      <PageWithForm/>
+      <PageWithForm
+        title="Добро пожаловать!" 
+        buttonText="Зарегистрироваться" 
+        descriptionLink="Уже зарегистрированы?" 
+        textLink="Войти"
+      />
     </section>
   );
 }

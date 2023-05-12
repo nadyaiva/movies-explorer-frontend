@@ -2,3 +2,9 @@
     height: 38px;
     width: 38px;
 }
+
+.form-title__top-logo {
+    display: flex;
+    justify-content: center;
+    padding: 56px 0 !important;
+}

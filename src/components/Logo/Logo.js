@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 import logo from "../../images/logo.svg";
 
-function Logo() {
+function Logo(props) {
     return (
-        <Link className="header__elem" to={'/' + paths.main}>
+        <Link className={"header__elem " + props.cssClass} to={'/' + paths.main}>
             <img className="logo" src={logo} alt="logo" />
         </Link>
     )

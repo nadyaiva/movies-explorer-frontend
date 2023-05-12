@@ -8,6 +8,8 @@ import Footer from "../Footer/Footer";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Movies from "../Movies/Movies";
 import Register from "../Register/Register";
+import Login from "../Login/Login";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 import "./Page.css";
 
@@ -20,6 +22,8 @@ function Page() {
         <Route path={paths.savedMovies} element={<SavedMovies/>} />
         <Route path={paths.movies} element={<Movies/>} />
         <Route path={paths.signUp} element={<Register/>} />
+        <Route path={paths.signIn} element={<Login/>} />
+        <Route path="*" element={<NotFoundPage/>} />
       </Routes>
     <Footer/>
     </div>

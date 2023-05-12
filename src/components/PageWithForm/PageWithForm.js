@@ -3,16 +3,12 @@ import "./PageWithForm.css";
 import FormTitle from "../FormTitle/FormTitle";
 import Form from "../Form/Form";
 
-function PageWithForm() {
+function PageWithForm(props) {
   return (
     <div className="form-page">
       <div className="form-page__container">
-        <FormTitle heading="Добро пожаловать!" />
-        <Form
-            title="Добро пожаловать!" 
-            buttonText="Зарегистрироваться" 
-            descriptionLink="Уже зарегистрированы?" 
-            textLink="Войти" />
+        <FormTitle heading={props.title} />
+        <Form {...props} />
       </div>
     </div>
   )

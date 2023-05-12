@@ -1,3 +1,14 @@
 .input__error_hide {
-    display: none;
+    visibility: hidden;
+}
+
+.input__label {
+    padding-bottom: 6px;
+}
+
+.input__input {
+    border: unset;
+    border-bottom: 1px solid #E8E8E8;
+    height: 44px;
+    width: 100%;
 }

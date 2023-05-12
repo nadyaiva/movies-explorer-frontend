@@ -1,16 +1,11 @@
 import "./Register.css";
 
-import Form from "../Form/Form";
+import PageWithForm from "../PageWithForm/PageWithForm";
 
 function Register() {
   return (
     <section className="register">
-      <Form 
-      title="Добро пожаловать!" 
-      buttonText="Зарегистрироваться" 
-      descriptionLink="Уже зарегистрированы?" 
-      textLink="Войти">
-      </Form>
+      <PageWithForm/>
     </section>
   );
 }

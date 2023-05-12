@@ -1,8 +1,33 @@
 .form__fieldset {
     display: flex;
     flex-direction: column;
+    border: unset;
 }
 
 .form__button {
+    background-color: #000;
+    border: unset;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 15px;
+    margin: 157px 30px 14px;
+}
 
+.form__link {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.form__link-text {
+    color: #A0A0A0;
+}
+
+.form__link-action {
+    color: #000;
+    padding-left: 7px;
 }

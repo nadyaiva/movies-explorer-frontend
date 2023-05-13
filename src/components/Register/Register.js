@@ -10,6 +10,10 @@ function Register() {
         buttonText="Зарегистрироваться" 
         descriptionLink="Уже зарегистрированы?" 
         textLink="Войти"
+        linkTo="/signin"
+        labelName="Имя"
+        labelEmail="E-mail"
+        labelPassword="Пароль"
       />
     </section>
   );

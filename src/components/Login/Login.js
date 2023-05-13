@@ -10,6 +10,10 @@ function Login() {
         buttonText="Войти" 
         descriptionLink="Ещё не зарегистрированы?" 
         textLink="Регистрация"
+        linkTo="/signup"
+        labelName="Имя"
+        labelEmail="E-mail"
+        labelPassword="Пароль"
       />
     </section>
   );

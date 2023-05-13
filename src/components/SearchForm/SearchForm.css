@@ -26,6 +26,10 @@
     border: unset;
 }
 
+.search-form__submit {
+    opacity: .6;
+}
+
 .search-form__svg {
     display: block;
     background-image: url(../../images/icon-find.svg);

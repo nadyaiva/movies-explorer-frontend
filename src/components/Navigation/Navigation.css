@@ -12,7 +12,7 @@
     display: none;
 }
 
-.navigation__elem_burger {
+.navigation__elem-burger {
     background-image: url(../../images/burger.svg);
     height: 44px;
     width: 44px;

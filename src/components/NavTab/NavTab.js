@@ -2,7 +2,7 @@ import "./NavTab.css";
 
 function NavTab() {
     return (
-        <section className="navtab">
+        <div className="navtab">
             <ul className="navtab__list">
                 <li className="navtab__tab">
                     <a className="navtab__link">О проекте</a>
@@ -14,7 +14,7 @@ function NavTab() {
                     <a className="navtab__link">Студент</a>
                 </li>
             </ul>
-        </section>
+        </div>
     );
 }
 

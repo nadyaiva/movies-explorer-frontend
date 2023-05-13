@@ -8,7 +8,7 @@ function AboutMe() {
         <section className="section-container">
             <SectionTitle title="Обо мне" />
         <div className="about-me">
-            <img className="about-me__photo" src={photo} />
+            <img className="about-me__photo" alt="Фото студента" src={photo} />
             <div className="about-me__info">
                 <h3 className="about-me__name">Надя</h3>
                 <p className="about-me__job">Фронтенд-разработчик, 30 лет</p>

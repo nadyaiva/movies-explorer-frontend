@@ -9,6 +9,7 @@ function MoviesCardList() {
       <MoviesCard key={i} />
       )}
       </ul>
+      <button className="card-list__more-button">Ещё</button>
     </div>
   )
 }

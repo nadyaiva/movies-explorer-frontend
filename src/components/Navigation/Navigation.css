@@ -1,0 +1,54 @@
+.navigation {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.navigation__elem {
+    display: none;
+}
+
+.navigation__elem-burger {
+    background-image: url(../../images/burger.svg);
+    height: 44px;
+    width: 44px;
+}
+
+.navigation__elem_signup {
+    padding-right: 14px;
+}
+
+.navigation__link {
+    text-decoration: none;
+}
+
+.navigation__link_signin {
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    padding: 5px 12px;
+}
+
+.navigation__link_signin:visited {
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .navigation {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .navigation__elem {
+        display: block;
+    }
+
+    .navigation__elem_burger {
+        display: none;
+    }
+}

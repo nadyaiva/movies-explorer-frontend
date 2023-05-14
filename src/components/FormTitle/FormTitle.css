@@ -1,0 +1,41 @@
+.form-title__heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 50px 0 0 0;
+    margin: 0;
+}
+
+.form-title {
+    padding: 56px 0 80px;
+}
+
+.form-title__top-logo {
+    display: flex;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+    .form-title {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 232px 0 40px;
+    }
+
+    .form-title__top-logo {
+        justify-content: start;
+    }
+
+    .form-title__heading  {
+        padding-top: 40px;
+        text-align: start;
+    }
+}
+
+@media screen and (min-width: 1125px) {
+    .form-title {
+        max-width: 552px;
+    }
+}

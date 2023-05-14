@@ -1,0 +1,19 @@
+.page {
+    position: relative;
+}
+
+.section-container {
+    padding: 70px 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .section-container {
+        padding: 90px 50px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .section-container {
+        padding: 100px 70px;
+    }
+}

@@ -26,7 +26,7 @@
     border: unset;
 }
 
-.search-form__submit {
+.search-form__submit:hover {
     opacity: .6;
 }
 

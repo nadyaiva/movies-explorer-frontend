@@ -9,16 +9,18 @@ import moviesApi from "../../utils/Api/MoviesApi";
 function Movies() {
 
    const [allMovies, setAllMovies] = useState([]);
- //   const [moviesToRender, setMoviesToRender] = useState([]);
-
+   const [areMoviesLoaded, setAreMoviesLoaded] = useState(false);
+ 
     
     function handleSearchMovie(inputData) {
         moviesApi.getAllMovies()
             .then(recivedMovies => {
                 setAllMovies(recivedMovies)
-                console.log(allMovies);
                 console.log(inputData);
             })
+            .finally(() => {
+                setAreMoviesLoaded(true);
+            });
         }
 
     return (
@@ -26,8 +28,11 @@ function Movies() {
             <Search
                 onSearch={handleSearchMovie}
             />
-            <MoviesCardList/>
-            <Preloader></Preloader>
+            <MoviesCardList 
+            areMoviesLoaded={areMoviesLoaded}
+            allMovies={allMovies}
+            />
+            {areMoviesLoaded ? <Preloader/> : null}
         </div>
     )
 }

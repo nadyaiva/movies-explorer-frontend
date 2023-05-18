@@ -1,18 +1,24 @@
 import "./MoviesCard.css";
 
-import cover from '../../images/cover1.png';
+import {moviesApiConfig} from "../../utils/config";
 
-function MoviesCard() {
+function MoviesCard(props) {
+
   return (
     <li className="movies-card">
+      {console.log(props)}
         <a className="movies-card__link" href='/#' target="_blank">
-        <img className="movies-card__cover" src={cover} alt="обложка"/>
+        <img className="movies-card__cover" src={moviesApiConfig.baseUrl + props.movie.image.url} alt="обложка"/>
         </a> 
         <div className="movies-card__info">
-            <p className="movies-card__title">33 слова о дизайне</p>
-            <button className="movies-card__button" type="button"></button>
+            <div className="movies-card__first-row">
+              <p className="movies-card__title">{props.movie.nameRU}</p>
+              <button className="movies-card__button" type="button"></button>
+            </div>
+            
+            <p className="movies-card__duration">{props.movie.duration} мин.</p>
         </div>
-      <p className="movies-card__duration">1ч 47м</p>
+      
     </li>
   );
 }

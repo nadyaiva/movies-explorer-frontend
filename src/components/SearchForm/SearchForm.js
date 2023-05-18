@@ -32,7 +32,6 @@ function handleSubmit(e) {
 }
 
 useEffect(() => {
-    console.log("use effect")
     setFormText("");
 }, []);
 

@@ -10,7 +10,7 @@ class MoviesApi extends Api {
 
   getAllMovies() {
     return fetch(`${this._baseUrl}/${this._moviesEndpoint}`)
-      .then(this._checkResponse);
+      .then(this._handleResponse);
   }
 }
 

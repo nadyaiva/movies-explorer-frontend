@@ -1,13 +1,16 @@
 import "./MoviesCardList.css";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList() {
+function MoviesCardList(props) {
   return (
     <div className="card-list">
       <ul className="list-grid">
-      {[...Array(10)].map((x, i) =>
-      <MoviesCard key={i} />
-      )}
+        {props.allMovies.map((movie) => (
+          <MoviesCard 
+            key={movie.id}
+            movie={movie}
+        />
+        ))}
       </ul>
       <button className="card-list__more-button">Ещё</button>
     </div>

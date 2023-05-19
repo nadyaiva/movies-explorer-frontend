@@ -10,8 +10,9 @@
 }
 
 .movies-card__cover {
+    border-radius: 6px 6px 0 0;
     display: block;
-    height: 168x;
+    height: 168px;
     object-fit: cover;
     object-position: center center;
     width: 100%;

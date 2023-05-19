@@ -8,8 +8,7 @@ const [formText, setFormText] = useState("");
 const [isInputValid, setIsInputValid] = useState(false)
 
 function handleInputValidation(inputData) {
-    let regex=/^[a-zA-Z]+$/;
-    if (inputData.match(regex)) {
+    if (inputData != "") {
         setIsInputValid(true);
     } else {
         setIsInputValid(false);

@@ -46,15 +46,15 @@ function Movies() {
         }
 
     return (
-        <div className="Movies">
+        <div className="movies">
             <Search
                 onSearch={handleSearchMovie}
             />
+            <p className="movies__message">{message ? message : null}</p>
             <MoviesCardList 
             isLoading={isLoading}
             foundMovies={foundMovies}
             />
-            <p>{message ? message : null}</p>
             {isLoading ? <Preloader/> : null}
         </div>
     )

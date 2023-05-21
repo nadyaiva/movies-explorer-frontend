@@ -1,5 +1,5 @@
 import Api from "./Api";
-import { mainApiConfig, formMessages } from "../config";
+import { mainApiConfig, messages } from "../config";
 
 class MainApi extends Api {
     constructor(config) {
@@ -112,4 +112,4 @@ class MainApi extends Api {
     }
 }
 
-export default new MainApi(mainApiConfig, formMessages.baseErrorMessag)
+export default new MainApi(mainApiConfig, messages.baseErrorMessag)

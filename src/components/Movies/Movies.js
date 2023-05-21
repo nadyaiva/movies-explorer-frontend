@@ -15,8 +15,6 @@ function Movies() {
  
     
     function handleSearchMovie(inputData) {
-
-        console.log('handleSearchMovie: ' + inputData)
         if (!inputData) {
             setMessage(messages.emptyInputError);
             localStorage.setItem('results', JSON.stringify([]));
@@ -36,7 +34,6 @@ function Movies() {
                 if (!results.length) {
                     setMessage(messages.noResultsFound);
                 }
-                console.log(results);
                 setFoundMovies(results);
             })
             .catch(() => setMessage(messages.baseErrorMessage))

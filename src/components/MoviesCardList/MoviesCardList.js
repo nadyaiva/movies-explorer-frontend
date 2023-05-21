@@ -13,17 +13,26 @@ function MoviesCardList({foundMovies}) {
   const isSavedMoviePage = pathname === '/saved-movies';
 
   useEffect(() => {
-    console.log(foundMovies.length + ' ' + moviesLength)
     window.addEventListener('resize', handleChangeWidthScreen);
     return () => {
       window.removeEventListener('resize', handleChangeWidthScreen);
     };
   }, []);
 
-  const handleChangeWidthScreen = () => {
-    if (window.innerWidth <= 600) {
+  useEffect(() => {
+    if (window.innerWidth <= 745) {
       setMoviesLength(5);
-    } else if (window.innerWidth <= 1024) {
+    } else if (window.innerWidth <= 1125) {
+      setMoviesLength(8);
+    } else {
+      setMoviesLength(12);
+    }
+  }, []);
+
+  const handleChangeWidthScreen = () => {
+    if (window.innerWidth <= 745) {
+      setMoviesLength(5);
+    } else if (window.innerWidth <= 1125) {
       setMoviesLength(8);
     } else {
       setMoviesLength(12);
@@ -31,7 +40,7 @@ function MoviesCardList({foundMovies}) {
   };
 
   const loadMoreMovies = () => {
-    if (window.innerWidth > 1024) setMoviesLength(moviesLength + 3);
+    if (window.innerWidth > 1125) setMoviesLength(moviesLength + 3);
     else {
       setMoviesLength(moviesLength + 2);
     }
@@ -79,7 +88,7 @@ function MoviesCardList({foundMovies}) {
         />
         ))}
       </ul>
-      { (foundMovies.length > 0 && foundMovies.length > moviesLength) && <button className="card-list__more-button" onClick={loadMoreMovies}>Ещё</button> }
+      { (foundMovies && foundMovies.length > 0 && foundMovies.length > moviesLength) && <button className="card-list__more-button" onClick={loadMoreMovies}>Ещё</button> }
     </div>
   )
 }

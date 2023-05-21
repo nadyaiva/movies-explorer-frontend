@@ -17,7 +17,6 @@ const { values, setValues, handleChange } = useInput({
     if (!isSavedMoviePage) {
       const searchParams = JSON.parse(localStorage.getItem('searchParams'));
       if (searchParams) setValues(searchParams);
-      onSearch(searchParams);
     }
   }, []);
 

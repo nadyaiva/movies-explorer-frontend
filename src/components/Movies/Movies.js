@@ -2,7 +2,7 @@ import "./Movies.css";
 import { useState} from "react";
 import Preloader from "../Preloader/Preloader";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import Search from "../Search/Search";
+import SearchForm from "../SearchForm/SearchForm";
 
 import moviesApi from "../../utils/Api/MoviesApi";
 import {messages} from "../../utils/config";
@@ -44,9 +44,7 @@ function Movies() {
 
     return (
         <div className="movies">
-            <Search
-                onSearch={handleSearchMovie}
-            />
+            <SearchForm onSearch={handleSearchMovie}/>
             <p className="movies__message">{message ? message : null}</p>
             <MoviesCardList 
             isLoading={isLoading}

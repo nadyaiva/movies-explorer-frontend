@@ -1,7 +1,7 @@
 import { maxShortFilmDuration } from './constants';
 
-export default function filterMovies ({ filterParams, movies }) {
-  if (filterParams.isShortMovies) {
+export default function filterMovies ({ filterParams, movies, isShortChecked }) {
+  if (isShortChecked) {
     return movies.filter((movie) => {
       return checkName(movie.nameRU, filterParams) && checkDuration(movie.duration, maxShortFilmDuration);
     });

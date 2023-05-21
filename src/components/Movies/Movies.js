@@ -11,6 +11,7 @@ import filterMovies from '../../utils/filterMovies';
 function Movies() {
     const [message, setMessage] = useState('');
     const [foundMovies, setFoundMovies] = useState([]);
+    const [isShortChecked, seIsShortChecked] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
  
     
@@ -30,7 +31,7 @@ function Movies() {
                         movieId: movie.id
                     };
                 });
-                const results = filterMovies({ filterParams: inputData, movies });
+                const results = filterMovies({ filterParams: inputData, movies, isShortChecked });
                 if (!results.length) {
                     setMessage(messages.noResultsFound);
                 }
@@ -42,9 +43,13 @@ function Movies() {
             });
         }
 
+        const handleCheckbox = () => {
+            seIsShortChecked(!isShortChecked);
+          };
+
     return (
         <div className="movies">
-            <SearchForm onSearch={handleSearchMovie}/>
+            <SearchForm onSearch={handleSearchMovie} onCheck={handleCheckbox} isChecked={isShortChecked}/>
             <p className="movies__message">{message ? message : null}</p>
             <MoviesCardList 
             isLoading={isLoading}

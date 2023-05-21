@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import useInput from "../../utils/hooks/useInput";
 
-function SearchForm({onSearch}) {
+function SearchForm({onSearch, onCheck, isChecked}) {
 const { pathname } = useLocation();
 const isSavedMoviePage = pathname === '/saved-movies';
 
@@ -52,7 +52,10 @@ const { values, setValues, handleChange } = useInput({
                 </button>
             </fieldset>
         </form>
-        <FilterCheckbox />
+        <FilterCheckbox
+            onCheck={onCheck}
+            checked={isChecked}
+         />
         </div>
         </div>
     )

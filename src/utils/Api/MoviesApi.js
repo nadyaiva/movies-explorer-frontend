@@ -1,5 +1,5 @@
 import Api from "./Api";
-import {moviesApiConfig, formMessages} from "../config";
+import {moviesApiConfig, messages} from "../config";
 
 class MoviesApi extends Api {
   constructor(settings) {
@@ -14,4 +14,4 @@ class MoviesApi extends Api {
   }
 }
 
-export default new MoviesApi(moviesApiConfig, formMessages.baseErrorMessag);
+export default new MoviesApi(moviesApiConfig, messages.baseErrorMessag);

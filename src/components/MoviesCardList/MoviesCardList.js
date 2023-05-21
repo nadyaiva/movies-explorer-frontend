@@ -5,7 +5,7 @@ function MoviesCardList(props) {
   return (
     <div className="card-list">
       <ul className="list-grid">
-        {props.allMovies.map((movie) => (
+        {props.foundMovies.map((movie) => (
           <MoviesCard 
             key={movie.id}
             movie={movie}

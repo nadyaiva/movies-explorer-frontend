@@ -1,38 +1,33 @@
 import "./SearchForm.css";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
+import useInput from "../../utils/hooks/useInput";
 
-function SearchForm(props) {
+function SearchForm({onSearch}) {
+const { pathname } = useLocation();
+const isSavedMoviePage = pathname === '/saved-movies';
 
-const [formText, setFormText] = useState("");
-const [isInputValid, setIsInputValid] = useState(false)
+const { values, setValues, handleChange } = useInput({
+    name: '',
+    isShortMovies: false
+  });
 
-function handleInputValidation(inputData) {
-    if (inputData != "") {
-        setIsInputValid(true);
-    } else {
-        setIsInputValid(false);
+  useEffect(() => {
+    if (!isSavedMoviePage) {
+      const searchParams = JSON.parse(localStorage.getItem('searchParams'));
+      if (searchParams) setValues(searchParams);
     }
+  }, []);
 
-    return isInputValid;
-}
-
-function handleSubmit(e) {
-    e.preventDefault();
-    if (!formText) {
-        return;
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    if (!isSavedMoviePage) {
+      localStorage.setItem('searchParams', JSON.stringify(values));
     }
-    else if (handleInputValidation(formText)) {
-        props.onSearch(formText)
-        setFormText("");
-        return;
-    }
-    return;
-}
-
-useEffect(() => {
-    setFormText("");
-}, []);
+    console.log(values);
+    onSearch(values);
+  };
 
     return (
          <form className="search-form" onSubmit={handleSubmit}>
@@ -44,10 +39,11 @@ useEffect(() => {
                     name="movie"
                     placeholder='Фильм'
                     id="search-form"
-                    value={formText || ""}
+                    value={values || ""}
                     onChange={(e) => {
-                        setFormText(e.target.value);
+                        handleChange(e);
                     }}
+                    required
                 />
                 <button className="search-form__submit" type="submit">
                     <span className="search-form__svg"/>

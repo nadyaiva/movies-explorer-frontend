@@ -23,17 +23,18 @@ export const moviesApiConfig = {
     checkAuthUrl: 'checkAuth'
   }
 
-  export const formMessages = {
+  export const messages = {
     baseErrorMessage: 'Что-то пошло не так',
     serverError: 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз',
-    movieNotFound: 'Ничего не найдено',
-    noUsersMovies: 'Нет сохраненных фильмов',
-    moviesWereNotSearched: 'Вы еще не выполняли поиск',
-    searchMovieFormErrorMessage: 'Нужно ввести ключевое слово',
-    signInError: 'Что-то пошло не так...',
-    signUpError: 'Что-то пошло не так...',
-    profileEditErrorMessage: 'Что-то пошло не так...',
-    profileEditSuccessMessage: 'Данные изменены',
+    noResultsFound: 'Ничего не найдено',
+    emptyInputError: 'Вы не ввели текст поиска',
+    noSavedMovies: 'Нет сохраненных фильмов',
+    notSearchedYet: 'Вы еще не выполняли поиск',
+    noKeywordError: 'Нужно ввести ключевое слово',
+    signInError: 'При входе что-то пошло не так...',
+    signUpError: 'При регистрации что-то пошло не так...',
+    profileEditError: 'При редактировании что-то пошло не так...',
+    profileEditSuccess: 'Данные успещно изменены',
     emailInputError: 'Введите корректный email.',
     nameInputError: 'От 2 до 30 символов. Только буквы, пробел и дефис.',
     passwordInputError: 'От 2 до 30 символов'

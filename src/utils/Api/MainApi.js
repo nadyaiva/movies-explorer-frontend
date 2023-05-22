@@ -15,7 +15,7 @@ class MainApi extends Api {
     }
 
     signUp(data) {
-        return fetch(`${this._baseUrl}/${this._signUpEndpoint}`, {
+        return fetch(`${this._baseUrl}/${this._signUpUrl}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
